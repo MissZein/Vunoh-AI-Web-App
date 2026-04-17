@@ -1,11 +1,14 @@
 import os
 import json
 import google.generativeai as genai
-from django.conf import settings
 from dotenv import load_dotenv
 
+# 1. Load the environment variables
 load_dotenv()
-genai.configure(api_key=os.getenv("GEMINI_API_KEY"), transport='rest')
+api_key = os.getenv("GEMINI_API_KEY")
+
+# 2. Re-configure the library cleanly
+genai.configure(api_key=api_key)
 
 def process_task_with_ai(user_input):
 
