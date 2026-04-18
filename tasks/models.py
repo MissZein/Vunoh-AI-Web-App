@@ -34,4 +34,4 @@ class Task(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
-        return f"{self.task_code} - {self.intent}"
+        return f"{self.intent} - {self.created_at.strftime('%Y-%m-%d')}"
