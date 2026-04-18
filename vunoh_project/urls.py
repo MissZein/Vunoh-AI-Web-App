@@ -16,10 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from tasks.views import create_task
+from tasks.views import create_task, list_tasks, update_task_status
 
 urlpatterns = [
     path('admin/', admin.site.urls), # Change this line
     path('api/create-task/', create_task, name='create_task'),
+    path('api/tasks/', list_tasks, name='list_tasks'),
+    path('api/tasks/status/', update_task_status, name='update_task_status'),
     path('', create_task, name='home'),
 ]
