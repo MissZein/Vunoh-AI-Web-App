@@ -58,3 +58,6 @@ The included vunoh_db_dump.sql contains:
 1. Table: tasks_task (Stores unique task codes, intents, entities, and risk scores).
 2. Messages: Dedicated fields for WhatsApp, Email, and SMS formats.
 3. Assignments: Logical mapping to Finance, Legal, or Operations teams
+
+Live hosted link
+https://vunoh-ai-web-app.onrender.com
